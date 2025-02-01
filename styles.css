@@ -1,0 +1,331 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar Styles */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0075B4;
+}
+
+/* Header Section */
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: #005b7f;
+  color: white;
+  padding: 0 5%;
+  animation: fadeIn 1s ease-out;
+}
+
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.text-section {
+  max-width: 50%;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: incoming 1s ease-out forwards 0.3s; /* Animation for name */
+}
+
+.text-section .greeting {
+  color: #c0e733; /* Dark navy blue for "I am" */
+}
+
+.text-section .name {
+  color: #fcfcfc; /* Dark navy blue for name */
+}
+
+.text-section .subtitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #b2b3b6; /* Bright green for subtitle */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Added text shadow for emphasis */
+}
+
+.text-section .about-text {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.photo-section {
+  max-width: 40%;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Resume Button */
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  background: rgb(231, 234, 228); /* White background */
+  color: black; /* Black text */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 20px;
+  position: relative;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-resume:hover {
+  background: #f4f4f4; /* Light gray background on hover */
+  transform: scale(1.1); /* Slight scale effect */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Shine effect */
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2); /* Scale effect */
+}
+
+/* Section Styles */
+section {
+  padding: 50px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #0075B4;
+}
+
+#about p, #experience p, #education p {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Skills and Projects Grid */
+.skills-grid, .projects-grid, .experience-grid, .education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-card, .project-card, .experience-card, .education-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover, .project-card:hover, .experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Bigger shadow */
+}
+
+.skill-card h3, .project-card h3, .education-card h3, .experience-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0075B4;
+}
+
+.skill-card p, .project-card p, .education-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0075B4;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #005b7f;
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Footer Section */
+footer {
+  background: #0075B4;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Add animation to the Education Section */
+#education {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#education.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-card {
+  transition: transform 0.5s ease;
+}
+
+.education-card:hover {
+  transform: scale(1.05); /* Slight scale effect when hovered */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Adding glow effect */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .skills-grid, .projects-grid, .experience-grid, .education-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 5%;
+  }
+
+  header .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section, .photo-section {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .profile-photo {
+    width: 70%;
+    margin-top: 20px;
+  }
+}
+
+/* Keyframe for incoming animation */
+@keyframes incoming {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframe for section fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
